@@ -1,16 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
-import random
+
 
 def calculate_determinant(list_of_lists):
-    '''
-    Метод, считающий детерминант входной матрицы,
-    если это возможно, если невозможно, то возвращается
-    None
-    Гарантируется, что в матрице float
-    :param list_of_lists: список списков - исходная матрица
-    :return: значение определителя или None
-    '''
     EPS = 1e-15
     n = len(list_of_lists)
     for i in range(n):
