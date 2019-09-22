@@ -11,4 +11,14 @@ def find_subarr(input_lst, num):
     :return: два индекса (начала и конца подмассива). Пустой tuple, если таких нет
     Пример: find_subarr([1, 2, 3, 4, 5, -1], 4) может вернуть (3, 3) или (4, 5)
     '''
-    raise NotImplementedError
+    a = {}
+    summa = 0
+    for i, val in enumerate(input_lst):
+    	summa += val
+    	if summa - num in a:
+    		return(a[summa - num], i)
+    	elif val == num:
+    		return(i, i)
+    	else:
+    		a[summa - val] = i
+    return ()
